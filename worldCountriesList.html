@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2vh;
+        }
+
+        .heading {
+            text-align: center;
+            font-size: 6vh;
+            font-weight: 700;
+            margin-bottom: 1vh;
+            letter-spacing: 1vh;
+        }
+
+        .totalCountries {
+            font-size: 2vh;
+            font-weight: 700;
+            margin-bottom: .5vh;
+        }
+
+        .countriesList {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            /* align-items: start; */
+            flex-wrap: wrap;
+            margin-top: 8vh;
+            gap: 2vh;
+        }
+
+        .countriesList p {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 1.5vh;
+            text-transform: uppercase;
+            /* background-color: red; */
+            width: 14vh;
+            height: 14vh;
+            box-shadow: 0 0 3px black;
+        }
+    </style>
+<script type="module" src="worldCountriesList.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <p class="heading">WORLD COUNTRIES LIST</p>
+        <p class="totalCountries">Total Number of countries: <span id="countryLength"></span></p>
+        <p>30DaysOfJavaScript:DOM-Day-2</p>
+        <p>Author:Asabeneh Yetayeh</p>
+        <div class="countriesList">
+        </div>
+    </div>
+</body>
+
+</html>

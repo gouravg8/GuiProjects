@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM2- Number generator</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body,
+    html {
+        width: 100%;
+        height: 100%;
+        font-family: Gilroy;
+    }
+
+    .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .heading {
+        font-weight: 600;
+        font-size: 7vh;
+    }
+
+    .day30 {
+        font-size: 3vh;
+    }
+
+    .day30,
+    .author {
+        text-decoration: underline;
+    }
+
+    .nums {
+        /* background-color: red; */
+        /* margin-top: 2vh; */
+        width: 70%;
+        height: 100%;
+        flex-wrap: wrap;
+        display: flex;
+        gap: 1vh;
+        /* display: grid;*/
+        justify-content: center;
+        align-items: center;
+        /* align-content: center; */
+        /* grid-template-rows: auto;  */
+        /* grid-template-columns: 12vh 12vh 12vh 12vh 12vh 12vh; */
+        /* grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));; */
+    }
+
+    p.allNums {
+        font-size: 4vh;
+        font-weight: 600;
+        text-align: center;
+        /* background-color: red; */
+        color: white;
+        width: 10vh;
+        height: auto;
+        margin-top: 1vh;
+        border-radius: 5px;
+        padding: 1vh;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <p class="heading">Number Generator</p>
+        <p class="day30">30DaysOfJavaScript:DOM Day 2</p>
+        <p class="author">Author: Asabeneh Yetayeh</p>
+        <div class="nums">
+
+        </div>
+    </div>
+
+    <script src="nums2Challange.js"></script>
+</body>
+
+</html>

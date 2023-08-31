@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom - 30 Days of Js challange</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body,
+    html {
+        font-family: Gilroy;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 60%;
+        margin: 1vh auto;
+    }
+
+    @media only screen and (min-width: 800px) {
+        .wrapper {
+            width: 50%;
+        }
+    }
+
+    .year {
+        font-size: 7vh;
+    }
+
+    h2.daysHeading {
+        margin-top: 3vh;
+        margin-bottom: 1vh;
+        font-weight: 300;
+        font-size: large;
+        text-decoration: underline;
+    }
+
+    p.dateTime {
+        background-color: rebeccapurple;
+        padding: 1vh 2vh;
+        margin-bottom: 1vh;
+        border-radius: 5px;
+    }
+
+    div.allLists {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+
+    div.listItems {
+        width: 100%;
+        margin: .5vh;
+        padding: 2vh 3vh;
+        background-color: rgb(196, 67, 28);
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1vh;
+        text-align: start;
+    }
+
+    .authorName {
+        text-decoration: none;
+        font-size: 2.5vh;
+        font-weight: bold;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    .socialList {
+        display: flex;
+        font-size: 3vh;
+        gap: 1vh;
+    }
+
+    #bio {
+        margin-top: 2vh;
+        text-align: center;
+    }
+
+    #professionDiv {
+        width: 100%;
+        margin-top: 2vh;
+        display: flex;
+        align-items: start;
+        justify-content: space-evenly;
+        /* background-color: red; */
+    }
+
+    #titlesDiv h3,
+    #skillsDiv h3,
+    #qualificationsDiv h3,
+    #keywordTitle {
+        margin-bottom: 1vh;
+        margin-top: 2vh;
+    }
+
+    .keywordListDiv {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        /* justify-content: space-around; */
+        gap: 1vh;
+        margin-top: 1vh;
+    }
+
+    .keywordListItems {
+        font-size: 1.5vh;
+        font-family: sans-serif;
+        padding: 1vh;
+        border-radius: 50px;
+        font-weight: bold;
+        font-style: italic;
+    }
+</style>
+<script type="module" src="thChallenge2.js"></script>
+
+<body>
+    <div class="wrapper">
+        <h1>Asabeneh Yetayeh challenges in <span class="year">2023</span></h1>
+        <h2 class="daysHeading">30DaysOfJavaScript Challenge</h2>
+        <p class="dateTime"></p>
+        <div class="allLists">
+
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
