@@ -65,13 +65,24 @@
         font-size: 4vh;
         font-weight: 600;
         text-align: center;
-        /* background-color: red; */
-        color: white;
+        color: black;
         width: 10vh;
         height: auto;
-        /* margin-top: 1vh; */
         border-radius: 5px;
         padding: 1vh;
+        animation: fadeIn 1s ease-in-out forwards;
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
     .inputs {
@@ -87,7 +98,8 @@
         padding: 0 1vh;
         border: 2px solid green;
     }
-    .inputs button{
+
+    .inputs button {
         height: 4vh;
         font-size: 1.5vh;
         font-weight: bold;
@@ -96,9 +108,41 @@
         border: none;
         color: white;
         background-color: green;
+        margin-top: 2vh;
     }
-    .inputs input:focus{
+
+    .inputs input:focus {
         border: 2px solid green;
+    }
+
+    .colors {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1vh;
+        margin-top: 1vh;
+    }
+
+    .odd,
+    .even,
+    .prime {
+        font-family: sans-serif;
+        padding: 1vh;
+        border-radius: 4px;
+        font-weight: 600;
+        color: black;
+    }
+
+    .odd {
+        background-color: yellow;
+    }
+
+    .even {
+        background-color: green;
+    }
+
+    .prime {
+        background-color: red;
     }
 </style>
 
@@ -108,9 +152,15 @@
         <p class="heading">Number Generator</p>
         <p class="day30">30DaysOfJavaScript:DOM Day 2</p>
         <p class="author">Author: Asabeneh Yetayeh</p>
+        <div class="colors">
+            <p class="odd">Odd</p>
+            <p class="even">Even</p>
+            <p class="prime">Prime</p>
+        </div>
         <div class="inputs">
+            <p class="error"></p>
             <input id="inputNumbers" type="number" placeholder="Generate more numbers" min="0">
-            <button id="generateNumbers">Generate numbers</button>
+            <button id="generateNumbers" type="submit">Generate numbers</button>
         </div>
         <div class="nums">
 

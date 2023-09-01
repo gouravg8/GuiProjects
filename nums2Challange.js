@@ -12,26 +12,34 @@ let prime = (n) => {
 
 let genBtn = document.querySelector("#generateNumbers");
 let numContainer = document.querySelector(".nums");
+let error = document.querySelector(".error");
+let inputField = document.querySelector("#inputNumbers");
 genBtn.addEventListener("click", () => {
-  let inputField = document.querySelector("#inputNumbers").value;
-  // console.log(inputField);
-  numContainer.textContent = ''
-  for (let i = 0; i <= inputField; i++) {
-    let p = document.createElement("p");
-    p.textContent = i;
-    p.classList.add("allNums");
-    // Even numbers background is green
-    // Odd numbers background is yellow
-    // Prime numbers background is red
-    if (iseven(i)) {
-      p.style.backgroundColor = "green";
+  let inputVal = +inputField.value;
+  numContainer.textContent = "";
+  if (typeof inputVal != typeof 1 || inputVal <= 0) {
+    error.textContent = "Enter the number only and It must be more than 0";
+    error.style.color = 'red'
+    error.style.display = 'block'
+  } else {
+    error.textContent = "";
+    for (let i = 0; i <= inputVal; i++) {
+      let p = document.createElement("p");
+      p.textContent = i;
+      p.classList.add("allNums");
+      // Even numbers background is green
+      // Odd numbers background is yellow
+      // Prime numbers background is red
+      if (iseven(i)) {
+        p.style.backgroundColor = "green";
+      }
+      if (!iseven(i)) {
+        p.style.backgroundColor = "yellow";
+      }
+      if (prime(i)) {
+        i < 2 ? p.style.backgroundColor : (p.style.backgroundColor = "red");
+      }
+      numContainer.appendChild(p);
     }
-    if (!iseven(i)) {
-      p.style.backgroundColor = "yellow";
-    }
-    if (prime(i)) {
-      i < 2 ? p.style.backgroundColor : (p.style.backgroundColor = "red");
-    }
-    numContainer.appendChild(p);
   }
 });
