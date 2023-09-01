@@ -21,12 +21,13 @@
     }
 
     .container {
-        width: 100%;
+        width: 70%;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         text-align: center;
+        margin: auto;
     }
 
     .heading {
@@ -46,12 +47,12 @@
     .nums {
         /* background-color: red; */
         /* margin-top: 2vh; */
-        width: 70%;
+        width: 100%;
         height: 100%;
         flex-wrap: wrap;
         display: flex;
         gap: 1vh;
-        /* display: grid;*/
+        margin-top: 2ch;
         justify-content: center;
         align-items: center;
         /* align-content: center; */
@@ -68,9 +69,36 @@
         color: white;
         width: 10vh;
         height: auto;
-        margin-top: 1vh;
+        /* margin-top: 1vh; */
         border-radius: 5px;
         padding: 1vh;
+    }
+
+    .inputs {
+        width: 100%;
+        height: 100%;
+        margin-top: 2vh;
+    }
+
+    .inputs input {
+        width: 70%;
+        height: 4vh;
+        font-size: 1.5vh;
+        padding: 0 1vh;
+        border: 2px solid green;
+    }
+    .inputs button{
+        height: 4vh;
+        font-size: 1.5vh;
+        font-weight: bold;
+        padding: 0 1vh;
+        cursor: pointer;
+        border: none;
+        color: white;
+        background-color: green;
+    }
+    .inputs input:focus{
+        border: 2px solid green;
     }
 </style>
 
@@ -80,6 +108,10 @@
         <p class="heading">Number Generator</p>
         <p class="day30">30DaysOfJavaScript:DOM Day 2</p>
         <p class="author">Author: Asabeneh Yetayeh</p>
+        <div class="inputs">
+            <input id="inputNumbers" type="number" placeholder="Generate more numbers" min="0">
+            <button id="generateNumbers">Generate numbers</button>
+        </div>
         <div class="nums">
 
         </div>

@@ -9,22 +9,29 @@ let prime = (n) => {
   }
   return true;
 };
+
+let genBtn = document.querySelector("#generateNumbers");
 let numContainer = document.querySelector(".nums");
-for (let i = 0; i <= 101; i++) {
-  let p = document.createElement("p");
-  p.textContent = i;
-  p.classList.add("allNums");
-  // Even numbers background is green
-  // Odd numbers background is yellow
-  // Prime numbers background is red
-  if (iseven(i)) {
-    p.style.backgroundColor = "green";
+genBtn.addEventListener("click", () => {
+  let inputField = document.querySelector("#inputNumbers").value;
+  // console.log(inputField);
+  numContainer.textContent = ''
+  for (let i = 0; i <= inputField; i++) {
+    let p = document.createElement("p");
+    p.textContent = i;
+    p.classList.add("allNums");
+    // Even numbers background is green
+    // Odd numbers background is yellow
+    // Prime numbers background is red
+    if (iseven(i)) {
+      p.style.backgroundColor = "green";
+    }
+    if (!iseven(i)) {
+      p.style.backgroundColor = "yellow";
+    }
+    if (prime(i)) {
+      i < 2 ? p.style.backgroundColor : (p.style.backgroundColor = "red");
+    }
+    numContainer.appendChild(p);
   }
-  if (!iseven(i)) {
-    p.style.backgroundColor = "yellow";
-  }
-  if (prime(i)) {
-    i < 2 ? (p.style.backgroundColor) : (p.style.backgroundColor = "red");
-  }
-  numContainer.appendChild(p);
-}
+});
